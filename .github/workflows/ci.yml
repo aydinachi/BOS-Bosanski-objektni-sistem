@@ -1,0 +1,48 @@
+name: BOS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  compiler-and-tests:
+    name: C++17 Compiler & Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build BOS compiler and run automated tests
+        run: |
+          make
+          make test
+
+      - name: Smoke test BOS CLI commands
+        run: |
+          ./bin/bos verzija
+          ./bin/bos provjeri examples/dobrodosli.bos
+          ./bin/bos prevedi examples/dobrodosli.bos -o /tmp/ci_test.bosb
+          ./bin/bos pokreni /tmp/ci_test.bosb
+
+  studio-ide:
+    name: BOS Studio Web IDE
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Type-check TypeScript
+        run: npm run lint
+
+      - name: Build frontend bundle
+        run: npm run build

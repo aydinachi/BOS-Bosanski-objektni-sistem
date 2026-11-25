@@ -1,0 +1,17 @@
+// Osnovni BOS program — promjenljive, uslovi i aritmetika
+neka ime kao tekst = "Ajdin"
+neka godine kao cijeli = 23
+
+ispisi "Dobro dosao u BOS!"
+ispisi "Ime: " + ime
+ispisi "Godine: " + godine
+
+ako godine >= 18 onda
+    ispisi "Punoljetan"
+inače
+    ispisi "Maloljetan"
+kraj
+
+neka rezultat = 10 + 20 * 3
+
+ispisi "Rezultat: " + rezultat

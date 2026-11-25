@@ -1,0 +1,33 @@
+// Strukture (zapis), kolekcije (niz, lista, rjecnik) i UTF-8 moduli
+koristi matematika
+koristi tekst
+
+zapis Student
+    ime kao tekst
+    godine kao cijeli
+    prosjek kao decimalni
+kraj
+
+neka studenti kao lista<Student> = [
+    Student("Ajdin Čolić", 23, 9.6),
+    Student("Amina Šabić", 21, 9.8),
+    Student("Haris Đukić", 22, 8.9)
+]
+
+ispisi "=== Spisak studenata (" + studenti.velicina() + ") ==="
+neka zbirProsjeka kao decimalni = 0.0
+za svaki s u studenti
+    ispisi tekst.veliko(s.ime) + " — godina: " + s.godine + ", prosjek: " + s.prosjek
+    zbirProsjeka += s.prosjek
+kraj
+
+neka srednja = zbirProsjeka / studenti.velicina()
+ispisi "Ukupan prosjek grupe: " + srednja
+ispisi "Kvadratni korijen od 144: " + matematika.korijen(144)
+
+neka gradovi kao rjecnik<tekst, cijeli> = {
+    "Sarajevo": 71000,
+    "Tuzla": 75000,
+    "Mostar": 88000
+}
+ispisi "Poštanski broj Sarajeva: " + gradovi["Sarajevo"]

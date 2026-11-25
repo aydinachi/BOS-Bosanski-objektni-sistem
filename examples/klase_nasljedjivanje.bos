@@ -1,0 +1,40 @@
+// Objektno-orijentisano programiranje u BOS-u: klase, privatno/javno i nasljeđivanje
+klasa Vozilo
+    javno:
+        marka kao tekst
+        godina kao cijeli
+
+        funkcija osnovniOpis() vraća tekst
+            vrati marka + " (" + godina + ")"
+        kraj
+kraj
+
+klasa Automobil nasljeduje Vozilo
+    javno:
+        vrata kao cijeli
+
+        konstruktor(m kao tekst, g kao cijeli, brVrata kao cijeli)
+            marka = m
+            godina = g
+            vrata = brVrata
+            brzina = 0
+        kraj
+
+        funkcija ubrzaj(iznos kao cijeli) vraća prazno
+            ako iznos > 0 onda
+                brzina += iznos
+            kraj
+        kraj
+
+        funkcija predstavi() vraća prazno
+            ispisi "Automobil: " + osnovniOpis() + " | Vrata: " + vrata + " | Brzina: " + brzina + " km/h"
+        kraj
+
+    privatno:
+        brzina kao cijeli
+kraj
+
+neka auto = Automobil("Audi A4", 2024, 5)
+auto.ubrzaj(45)
+auto.ubrzaj(35)
+auto.predstavi()

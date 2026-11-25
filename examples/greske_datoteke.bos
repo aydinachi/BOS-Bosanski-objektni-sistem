@@ -1,0 +1,26 @@
+// Obrada grešaka (pokusaj / uhvati) i rad sa datotekama
+koristi datoteke
+koristi matematika
+
+pokusaj
+    ispisi "Pokušaj dijeljenja sa nulom..."
+    neka rezultat = 10 / 0
+    ispisi rezultat
+uhvati greska
+    ispisi "Uhvaćena greška [" + greska.kod + "]: " + greska.poruka
+kraj
+
+pokusaj
+    neka x = matematika.korijen(-25)
+    ispisi x
+uhvati greska
+    ispisi "Matematička greška: " + greska.poruka
+kraj
+
+neka dat = datoteke.otvori("zapisnik.txt", "w")
+datoteke.zapisi(dat, "BOS v0.1 — uspješan zapis sa bosanskim slovima: č, ć, ž, š, đ!")
+datoteke.zatvori(dat)
+
+neka citanje = datoteke.otvori("zapisnik.txt", "r")
+ispisi "Sadržaj datoteke: " + datoteke.procitaj(citanje)
+datoteke.zatvori(citanje)

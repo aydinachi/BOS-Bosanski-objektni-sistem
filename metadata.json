@@ -1,0 +1,6 @@
+{
+  "name": "BOS Studio — Bosanski objektni sistem",
+  "description": "Complete Bosnian programming language (BOS v0.1) with a C++17 compiler, bytecode VM, standard library, CLI, and integrated developer environment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

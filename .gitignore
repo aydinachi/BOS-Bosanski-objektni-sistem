@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# C++ compiler build outputs
+build/
+bin/
+*.o
+*.bosb
+
+# Frontend build outputs
+dist/
+coverage/
+
+# Runtime seeded IDE workspace (auto-generated from examples/)
+workspace/
+
+# Environment & OS files
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Editor directories
+.vscode/
+.idea/

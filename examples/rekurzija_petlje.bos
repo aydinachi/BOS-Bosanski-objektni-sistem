@@ -1,0 +1,26 @@
+// Funkcije, rekurzija i sve vrste petlji u BOS-u
+funkcija faktorijel(n kao cijeli) vraća cijeli
+    ako n <= 1 onda
+        vrati 1
+    kraj
+    vrati n * faktorijel(n - 1)
+kraj
+
+funkcija fibonacci(n kao cijeli) vraća cijeli
+    ako n <= 1 onda
+        vrati n
+    kraj
+    vrati fibonacci(n - 1) + fibonacci(n - 2)
+kraj
+
+ispisi "=== Faktorijel (1 do 7) ==="
+ponavljaj i od 1 do 7
+    ispisi i + "! = " + faktorijel(i)
+kraj
+
+ispisi "=== Fibonaccijev niz ==="
+neka brojac = 0
+dok brojac < 10 radi
+    ispisi "F(" + brojac + ") = " + fibonacci(brojac)
+    brojac += 1
+kraj
